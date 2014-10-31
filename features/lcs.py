@@ -1,3 +1,5 @@
+from __future__ import division
+
 # return the longest common subsequence
 def longest_common_subsequence(a, b):
     lengths = [[0 for j in range(len(b)+1)] for i in range(len(a)+1)]
@@ -41,7 +43,7 @@ def longest_common_substring(s1, s2):
 # return the normalized longest common subsequence (a ratio)
 def normalized_longest_common_subsequence(a, b):
     lcs_len = len(lcs(a, b))
-    return (lcs_len * lcs_len * 1.0) / (len(a) * len(b))
+    return (lcs_len * lcs_len) / (len(a) * len(b))
 
 
 
