@@ -10,13 +10,7 @@ def to_syn_vec(text):
     not_none = lambda x: x is not None
     lst = to_list_without_stopwords(text)
 
-    def map_and_add(lst, word):
-        synset = word_to_synset(word)
-        if synset is not None:
-            lst.append(synset) 
-        return lst
-
-    synsets = reduce(map_and_add, lst, [])
+    synsets = list(filter(lambda t: t is not None, map(word_to_synset, lst)))
 
     return to_vec(synsets)
 
