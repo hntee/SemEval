@@ -42,7 +42,7 @@ def longest_common_substring(s1, s2):
 
 # return the normalized longest common subsequence (a ratio)
 def normalized_longest_common_subsequence(a, b):
-    lcs_len = len(lcs(a, b))
+    lcs_len = len(longest_common_subsequence(a, b))
     return (lcs_len * lcs_len) / (len(a) * len(b))
 
 
