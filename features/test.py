@@ -5,10 +5,15 @@ from wordnet import *
 from levenshtein import *
 from lcs import * 
 
-s1 = "But other sources close to the sale said Vivendi was keeping the door open to further bids and hoped to see bidders interested in individual assets team up."
 
-s2 = "But other sources close to the sale said Vivendi was keeping the door open for further bids in the next day or two."
+s1 = "The US army invaded Kabul on May 7th last year, 2010."
+s2 = "In May 2010, the troops attempted to invade Kabul."
 
+sentences_list = [(s1, s2),
+				  ("The bird is bathing in the sink.", "Birdie is washing itself in the water basin."),
+				  ("They flew out of the nest in groups.","They flew into the nest together.")
+
+				 ]
 
 func_list=[syn_cosine,
            cosine,
@@ -23,4 +28,14 @@ def test(s1, s2, func_list):
         print f.__name__,":", f(s1, s2)
 
 def t():
-	test(s1, s2, func_list)
+	for (s1, s2) in sentences_list:
+		test(s1, s2, func_list)
+
+
+
+# from sklearn import svm
+# Z = [[0, 0, 8,6], [2, 2, 55,6]]
+# y = [0.5, 2.5]
+# clf = svm.SVR()
+# clf.fit(Z, y) 
+# clf.predict([[1, 1]])

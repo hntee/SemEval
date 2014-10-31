@@ -1,0 +1,10 @@
+00-readme.txt
+1.txt
+STS.gs.MSRpar.txt
+STS.gs.MSRvid.txt
+STS.gs.SMTeuroparl.txt
+STS.input.MSRpar.txt
+STS.input.MSRvid.txt
+STS.input.SMTeuroparl.txt
+STS.output.MSRpar.txt
+correlation.pl*
